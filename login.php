@@ -27,6 +27,7 @@ session_start();
 		{
 			$username = test_input($_POST["username"]);
 			$password = test_input($_POST["password"]);
+			$_SESSION['username']=$username;
 		}
 
 		if ($_SERVER["REQUEST_METHOD"] == "POST")

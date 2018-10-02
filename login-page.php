@@ -19,7 +19,7 @@ session_start();
     <body>
         <div class="border">
            <?php
-
+            $namaque = $_SESSION['username'];
             date_default_timezone_set("Asia/Bangkok");
 
             function msg_login()
@@ -42,7 +42,7 @@ session_start();
                     {
                         echo "Selamat Sore :)". date("  h:i:s a");
                     }
-                    else echo "Selamat Malam :)". date(" h:i:s a");
+                    else echo "Selamat Malam :)". date(" h:i:s a") ;
                 }
 
                 else
@@ -68,7 +68,7 @@ session_start();
             
             ?>
 
-            <h1>Selamat Datang :)</h1>
+            <h1>Selamat Datang  <?php echo "$namaque";?> :) </h1>
 
             <div>
             <?php msg_login(); ?>
